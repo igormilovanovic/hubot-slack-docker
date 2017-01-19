@@ -1,14 +1,22 @@
 # Dockerized and Slack-integrated Hubot
 
-[![Docker Hub](https://img.shields.io/badge/docker-ready-blue.svg)](https://registry.hub.docker.com/u/chihchun/hubot-slack/)
-[![](https://images.microbadger.com/badges/image/chihchun/hubot-slack.svg)](https://microbadger.com/images/chihchun/hubot-slack "Get your own image badge on microbadger.com")
-[![Join the chat at https://gitter.im/chihchun/hubot-slack-docker](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/chihchun/hubot-slack-docker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+
+[![Docker Hub](https://img.shields.io/badge/docker-ready-blue.svg)](https://registry.hub.docker.com/u/tnkng/armhf-hubot-slack/)
+[![](https://images.microbadger.com/badges/image/tnkng/armhf-hubot-slack.svg)](https://microbadger.com/images/tnkng/armhf-hubot-slack "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/tnkng/armhf-hubot-slack.svg)](https://microbadger.com/images/tnkng/armhf-hubot-slack "Get your own version badge on microbadger.com")
+
+
+This is Docker image for running Hubot for Slack on RaspberryPi3 (ARMv7) and compatible platforms. 
+
+
+> This work is based on already existing work of https://github.com/chihchun/hubot-slack-docker providing initial Dockerfile and https://hub.docker.com/u/forumi0721alpinearmhf providing me with base Alpine Linux image for ARM HF architecture. Thank you folks.
 
 Setup a hubot from https://slack.com/services/new/hubot and assign the API token to the following command
 
 ```
-docker pull chihchun/hubot-slack
-docker run -e HUBOT_SLACK_TOKEN=xoxb-1234567890-XXXXXXXXXXXXXXXXXXXXXXXX -d chihchun/hubot-slack
+docker pull tnkng/armhf-hubot-slack
+docker run -e HUBOT_SLACK_TOKEN=xoxb-1234567890-XXXXXXXXXXXXXXXXXXXXXXXX -d tnkng/armhf-hubot-slack --name hubot-slack
 ```
 
 # Hubot Scripts
